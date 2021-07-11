@@ -2,13 +2,17 @@ let newTodo = document.querySelector('.newTodo');
 let listOfTodos = document.querySelector('.listOfTodos');
 
 const createTodo = () => {
-    listOfTodos.innerHTML += `
-    <div class="todo-item" style="display: flex;">
-        <input type="checkbox" class="todo-item-checkbox" name="todo" style="margin-right: 15px;"/>
-        <p>${newTodo.value}</p>
-    </div>    
-    `
-    newTodo.value = '';
+    newTodo.value === "" 
+    ?
+        alert('Todo textfield is empty!!!') 
+    :
+        listOfTodos.innerHTML += `
+        <div class="todo-item" style="display: flex;">
+            <input type="checkbox" class="todo-item-checkbox" name="todo" style="margin-right: 15px;"/>
+            <p>${newTodo.value}</p>
+        </div>    
+        `
+        newTodo.value = '';
 }
 
 const markAllTodos = () => {
