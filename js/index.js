@@ -17,3 +17,10 @@ const markAllTodos = () => {
         todo.setAttribute('checked', '');
     })
 }
+
+const clearAllTodos = () => {
+    let todoItems = document.querySelectorAll('.todo-item');
+    todoItems.forEach(todo => {
+        todo.removeAttribute('checked');
+    })
+}
